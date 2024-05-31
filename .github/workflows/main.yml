@@ -2,7 +2,7 @@ name: Deploy to Kubernetes
 
 on:
   pull_request:
-    branches: [master]
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -20,6 +20,6 @@ jobs:
     
     - name: Deploy to Linode Kubernetes
       run: |
-        echo "${{ secrets.KUBECONFIG }}" > base64 --decode > kubeconfig.yaml
+        echo "${{ secrets.KUBECONFIG }}" | base64 --decode > kubeconfig.yaml
         export KUBECONFIG=kubeconfig.yaml
-        kubectl apply -f k8s/deployment.yaml
+        kubectl apply -f deployment.yaml
