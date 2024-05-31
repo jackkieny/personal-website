@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './styles/App.css';
 
 function App() {
@@ -15,8 +16,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello</h1> 
-      <p>The current time is {currentTime}</p>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={
+            <>
+              <h1>Hello</h1> 
+              <p>The current time is {currentTime}</p>
+              <Link to='/page2'>Go to page 2</Link>
+            </>
+          }
+          />
+          <Route exact path='/page2' element={
+            <>
+              <h1>Page 2</h1>
+              <p>The current time is {currentTime}</p>
+              <Link to='/'>Go back</Link>
+            </>
+          }/>
+        </Routes>
+      </Router>
     </div>
   );
 }
