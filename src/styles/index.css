@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root{
+  --react-color: #00dcff;
+  --nginx-color: #099940;
+  --docker-color: #1072d8;
+  --k8s-color: #3872e7;
+  --github-color: #632e86;
+  --linode-color: #00b259;
+}
+
 body {
   margin: 0;
   padding: 0;
