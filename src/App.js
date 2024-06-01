@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './styles/App.css';
 
+import Main from './components/Main';
+import About from './components/About';
+import Contact from './components/Contact';
+
 function App() {
   
   const [currentTime, setCurrentTime] = useState(0);
@@ -15,24 +19,29 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="app">
       <Router>
+      <header className="app-header">
+        <Link to='/' className='app-header-link'>
+          <h3 className='app-header-title'>Home</h3>
+        </Link>
+        <Link to='/about' className='app-header-link'>
+          <h3 className='app-header-title'>About</h3>
+        </Link>
+        <Link to='/contact' className='app-header-link'>
+          <h3 className='app-header-title'>Contact</h3>
+        </Link>
+      </header>
         <Routes>
-          <Route exact path='/' element={
-            <>
-              <h1>Hello</h1> 
-              <p>The current time is {currentTime}</p>
-              <Link to='/page2'>Go to page 2</Link>
-            </>
-          }
+          <Route exact path='/' 
+            element={<Main/>}
           />
-          <Route exact path='/page2' element={
-            <>
-              <h1>Page 2</h1>
-              <p>The current time is {currentTime}</p>
-              <Link to='/'>Go back</Link>
-            </>
-          }/>
+          <Route exact path='/about'
+            element={<About/>}
+          />
+          <Route exact path='/contact'
+            element={<Contact/>}
+          />
         </Routes>
       </Router>
     </div>

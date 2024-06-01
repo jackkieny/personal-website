@@ -1,0 +1,80 @@
+.about-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.icon-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+
+    place-items: center;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 4px solid white;
+    border-radius: 1em;
+
+}
+
+.about-icon{
+    font-size: 4em;
+}
+
+.react-icon{
+    color: var(--react-color);
+}
+
+.python-logo{
+    width: 50px;
+}
+
+.nginx-icon{
+    color: var(--nginx-color);
+}
+
+.docker-icon{
+    color: var(--docker-color);
+}
+
+.kubernetes-icon{
+    color: var(--k8s-color);
+}
+
+.linode-icon{
+    color: var(--linode-color);
+}
+
+.github-icon{
+    color: var(--github-color);
+}
+
+.github-link-container{
+    grid-column: span 2;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-full-icon{
+    width: 100px;
+    border: 2px dotted white;
+    border-radius: 10px;
+
+    font-size: 4em;
+    color: white;
+}
+
+.github-full-icon:hover{
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}

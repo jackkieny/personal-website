@@ -1,0 +1,21 @@
+.main-container{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.construction-icon{
+  font-size: 1.5em;
+  color: #ffa300;
+  margin: 5px;
+}
+
+.hr-divider{
+    width: 80%;
+    font-weight: bold;
+}
