@@ -1,0 +1,29 @@
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact-section{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.contact-link, .contact-link:visited{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.contact-link:hover{
+    background: rgba(255, 255, 255, 0.3)
+}
+
+.contact-icon{
+    font-size: 2em;
+    margin-right: 10px;
+}
