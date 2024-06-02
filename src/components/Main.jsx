@@ -6,7 +6,7 @@ function Main() {
   return (
       <div className='main-container'>
         <hr className='hr-divider'/>
-        <h1>Hello!</h1>
+        <h1>Hello, World!</h1>
         <div>
             <LuConstruction className='construction-icon'/>
             <LuConstruction className='construction-icon'/>
